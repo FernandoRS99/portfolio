@@ -43,38 +43,70 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-background:#349b15;
-border-bottom:1px solid rgba(255,255,255,0.15);
-z-index:1000;
 background:linear-gradient(135deg,#0F766E,#115E59);
+box-shadow:0 3px 12px rgba(0,0,0,0.25);
+z-index:1000;
 }
 
 .nav-container{
-max-width:1000px;
+max-width:1100px;
 margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:12px 20px;
+padding:18px 30px;
 }
 
-.logo{
-font-weight:bold;
-font-size:16px;
+/* LOGO */
+
+.logo a{
+font-size:22px;
+font-weight:700;
 color:white;
+}
+
+
+/* MENU */
+
+.menu{
+display:flex;
+gap:28px;
 }
 
 .menu a{
-margin-left:18px;
-text-decoration:none;
 color:white;
+text-decoration:none;
+font-size:16px;
 font-weight:500;
-font-size:14px;
+position:relative;
 transition:0.2s;
 }
 
+/* efeito underline elegante */
+
+.menu a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+left:0;
+bottom:-4px;
+background:white;
+transition:0.25s;
+}
+
+.menu a:hover::after{
+width:100%;
+}
+
 .menu a:hover{
-color:#A7F3D0;
+opacity:0.9;
+}
+
+/* espaço para navbar fixa */
+
+body{
+padding-top:90px;
 }
 
 
@@ -353,6 +385,42 @@ height:90px;
 height:24px;
 }
 
+.header{
+flex-direction:column;
+align-items:center;
+text-align:center;
+}
+
+/* centraliza os projetos destaque */
+
+.destaques{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:18px;
+}
+
+/* controla tamanho das imagens */
+
+.destaques img{
+width:100%;
+max-width:320px;
+height:auto;
+border-radius:8px;
+padding: auto;
+}
+
+.projeto{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.preview{
+width:100%;
+height:auto;
+}
+
+
 }
 
 </style>
@@ -365,12 +433,14 @@ height:24px;
 
 <div class="nav-container">
 
-<div class="logo">FernandoRS</div>
+<div class="logo">
+<a href="index.html">Fernando Roque</a>
+</div>
 
 <div class="menu">
 
-<a href="#topo">Home</a>
 <a href="#projetos">Projetos</a>
+<a href="portfolios.html">Portfólio</a>
 <a href="https://github.com/FernandoRS99" target="_blank">GitHub</a>
 <a href="https://www.linkedin.com/in/fernandoroquedossantos" target="_blank">LinkedIn</a>
 
@@ -378,7 +448,7 @@ height:24px;
 
 </div>
 
-</nav>    
+</nav> 
 
 <div class="container" id="topo">
 
@@ -596,4 +666,3 @@ Ver GitHub
 
 </body>
 </html>
-```
