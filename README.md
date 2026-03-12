@@ -68,6 +68,9 @@ Código versionado utilizando Git e hospedado no GitHub.
 
 Fernando Roque dos Santos
 
+Portfólio
+https://fernando-roque-portfolio.netlify.app
+
 GitHub  
 https://github.com/FernandoRS99
 
