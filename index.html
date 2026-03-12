@@ -202,12 +202,27 @@ margin:20mm;
 
 @media print{
 
+/* remove navbar */
+
+.navbar{
+display:none;
+}
+
+/* remove botão PDF */
+
+.pdf-btn{
+display:none;
+}
+
+/* remove botão antigo se existir */
+
 .button{
 display:none;
 }
 
 body{
 background:white;
+padding-top:0;
 }
 
 .container{
@@ -232,6 +247,7 @@ page-break-after: avoid;
 }
 
 }
+
 
 </style>
 
