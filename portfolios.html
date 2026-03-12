@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio - Fernando Roque</title>
+
+<style>
+
+/* ===== RESET BÁSICO ===== */
+
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+background:#f4f4f4;
+margin:0;
+padding-top:65px; /* espaço da navbar */
+}
+
+
+/* ===== CONTAINER ===== */
+
+.container{
+max-width:1000px;
+margin:auto;
+background:white;
+padding:40px 30px;
+}
+
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0F766E;
+border-bottom:1px solid rgba(255,255,255,0.15);
+z-index:1000;
+background:linear-gradient(135deg,#0F766E,#115E59);
+}
+
+.nav-container{
+max-width:1000px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 20px;
+}
+
+.logo{
+font-weight:bold;
+font-size:16px;
+color:white;
+}
+
+.menu a{
+margin-left:18px;
+text-decoration:none;
+color:white;
+font-weight:500;
+font-size:14px;
+transition:0.2s;
+}
+
+.menu a:hover{
+color:#A7F3D0;
+}
+
+
+/* ===== PERFIL ===== */
+
+.header{
+display:flex;
+gap:20px;
+align-items:center;
+margin-bottom:30px;
+}
+
+.foto{
+width:110px;
+height:110px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #ddd;
+box-shadow:0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bio{
+flex:1;
+}
+
+.bio h2{
+margin:0 0 8px 0;
+}
+
+.bio-links a{
+margin-right:14px;
+color:#0077cc;
+text-decoration:none;
+font-weight:bold;
+}
+
+.bio-links a:hover{
+text-decoration:underline;
+}
+
+
+/* ===== BADGES ===== */
+
+.skills{
+margin:15px 0;
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+align-items:center;
+}
+
+.skills img{
+height:28px;
+}
+
+
+/* ===== PROJETOS DESTAQUE ===== */
+
+.destaques{
+display:flex;
+gap:15px;
+margin:20px 0 40px 0;
+flex-wrap:wrap;
+}
+
+.destaques a{
+display:block;
+border:1px solid #ddd;
+border-radius:6px;
+overflow:hidden;
+}
+
+.destaques img{
+width:200px;
+height:120px;
+object-fit:cover;
+display:block;
+cursor:pointer;
+transition:transform 0.2s;
+}
+
+.destaques img:hover{
+transform:scale(1.05);
+}
+
+
+/* ===== TÍTULO ===== */
+
+h1{
+text-align:center;
+margin-bottom:20px;
+}
+
+
+/* ===== GRID PROJETOS ===== */
+
+.grid{
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+
+/* ===== CARD PROJETO ===== */
+
+.projeto{
+display:flex;
+gap:25px;
+border:1px solid #ddd;
+border-radius:8px;
+background:white;
+padding:20px;
+box-shadow:0 2px 6px rgba(0,0,0,0.08);
+align-items:center;
+
+opacity:0;
+transform:translateY(20px);
+animation:fadeUp 0.6s ease forwards;
+}
+
+.projeto:nth-child(2){animation-delay:0.1s;}
+.projeto:nth-child(3){animation-delay:0.2s;}
+.projeto:nth-child(4){animation-delay:0.3s;}
+.projeto:nth-child(5){animation-delay:0.4s;}
+
+.projeto:hover{
+transform:translateY(-4px);
+transition:0.25s;
+box-shadow:0 8px 18px rgba(0,0,0,0.15);
+}
+
+
+/* ===== PREVIEW ===== */
+
+.preview{
+width:420px;
+height:220px;
+object-fit:contain;
+background:#f7f7f7;
+border-radius:6px;
+border:1px solid #ddd;
+padding:8px;
+}
+
+
+/* ===== GITHUB GRID ===== */
+
+.github-preview{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:4px;
+padding:6px;
+}
+
+.github-preview img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:4px;
+cursor:pointer;
+transition:transform 0.2s;
+}
+
+.github-preview img:hover{
+transform:scale(1.05);
+}
+
+
+/* ===== TEXTO PROJETO ===== */
+
+.content{
+flex:1;
+}
+
+.projeto h2{
+margin-top:0;
+font-size:20px;
+}
+
+.tech{
+font-size:14px;
+color:#666;
+margin-top:10px;
+}
+
+
+/* ===== BOTÃO ===== */
+
+.link{
+display:inline-block;
+margin-top:15px;
+padding:10px 16px;
+background:#0077cc;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-size:14px;
+transition:0.25s;
+}
+
+.link:hover{
+background:#005fa3;
+transform:scale(1.05);
+}
+
+
+/* ===== ANIMAÇÃO ===== */
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+/* ===== RESPONSIVO ===== */
+
+/* tablets */
+
+@media(max-width:900px){
+
+.container{
+padding:30px 20px;
+}
+
+.header{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.projeto{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.preview{
+width:100%;
+height:auto;
+}
+
+.destaques img{
+width:100%;
+max-width:260px;
+height:auto;
+}
+
+}
+
+
+/* celulares */
+
+@media(max-width:600px){
+
+.nav-container{
+flex-direction:column;
+gap:8px;
+}
+
+.menu{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.menu a{
+margin:6px 8px;
+}
+
+.foto{
+width:90px;
+height:90px;
+}
+
+.skills img{
+height:24px;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<nav class="navbar">
+
+<div class="nav-container">
+
+<div class="logo">FernandoRS</div>
+
+<div class="menu">
+
+<a href="#topo">Home</a>
+<a href="#projetos">Projetos</a>
+<a href="https://github.com/FernandoRS99" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/fernandoroquedossantos" target="_blank">LinkedIn</a>
+
+</div>
+
+</div>
+
+</nav>    
+
+<div class="container" id="topo">
+
+<!-- PERFIL -->
+
+<div class="header">
+
+<img src="img/perfil.png" class="foto">
+
+<div class="bio">
+
+<h2>Fernando Roque dos Santos</h2>
+
+<p>
+Técnico Eletromecânico com mais de 17 anos de experiência em manutenção industrial e estudante de Engenharia da Computação.
+Desenvolvo aplicações web e ferramentas voltadas para processos industriais e automação.
+</p>
+
+<div class="skills">
+
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+
+<img src="https://img.shields.io/badge/SAP-0FAAFF?style=for-the-badge&logo=sap&logoColor=white">
+
+<img src="https://img.shields.io/badge/HTA-Windows-blue?style=for-the-badge">
+
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
+
+<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white">
+
+</div>
+
+<div class="bio-links">
+
+<a href="https://github.com/FernandoRS99" target="_blank">GitHub</a>
+
+<a href="https://www.linkedin.com/in/fernandoroquedossantos" target="_blank">LinkedIn</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PROJETOS EM DESTAQUE -->
+
+<div class="destaques">
+
+<a href="https://escala3x3.netlify.app/2026.html" target="_blank">
+<img src="img/escala3x3.png">
+</a>
+
+<a href="https://pousadasecretslim.netlify.app/" target="_blank">
+<img src="img/pousadasecret.png">
+</a>
+
+<a href="https://fernandors99.github.io/Projeto-Neymar-bio/" target="_blank">
+<img src="img/neymarbio.png">
+</a>
+
+</div>
+
+
+<h1 id="projetos">Portfólio de Projetos</h1>
+
+<p style="text-align:center;color:#666;margin-top:-20px;margin-bottom:30px;">
+Projetos desenvolvidos durante meus estudos em desenvolvimento web versionados no Netlify
+</p>
+
+<div class="grid">
+
+<!-- ESCALA 3X3 -->
+
+<div class="projeto">
+<img src="img/escala3x3.png" class="preview">
+<div class="content">
+<h2>Escala de Trabalho 3x3</h2>
+<p>
+Aplicação web desenvolvida para gerenciamento de escalas de trabalho no modelo 3x3,
+utilizando um calendário mensal com identificação visual por cores para facilitar a leitura dos turnos.
+</p>
+<p class="tech">Tecnologias: HTML, CSS, JavaScript</p>
+<a class="link" href="https://escala3x3.netlify.app/2026.html" target="_blank">Ver Projeto</a>
+</div>
+</div>
+
+
+<!-- IW41 -->
+
+<div class="projeto">
+<img src="img/iw41app.png" class="preview">
+<div class="content">
+<h2>IW41 App</h2>
+<p>
+Aplicação web desenvolvida para auxiliar no processo de apontamento de ordens de manutenção
+relacionadas à transação IW41 do SAP.
+</p>
+<p class="tech">Tecnologias: HTML, CSS, JavaScript</p>
+<a class="link" href="https://iw41slim.netlify.app/" target="_blank">Ver Projeto</a>
+</div>
+</div>
+
+
+<!-- POUSADA -->
+
+<div class="projeto">
+<img src="img/pousadasecret.png" class="preview">
+<div class="content">
+<h2>Pousada Secret</h2>
+<p>
+Website institucional desenvolvido para apresentação de uma pousada,
+com foco em divulgação de hospedagem e informações para visitantes.
+</p>
+<p class="tech">Tecnologias: HTML, CSS</p>
+<a class="link" href="https://pousadasecretslim.netlify.app/" target="_blank">Ver Projeto</a>
+</div>
+</div>
+
+
+<!-- PET -->
+
+<div class="projeto">
+<img src="img/petboutique.png" class="preview">
+<div class="content">
+<h2>Pet Boutique</h2>
+<p>
+Website institucional para pet shop com apresentação de serviços e produtos.
+</p>
+<p class="tech">Tecnologias: HTML, CSS</p>
+<a class="link" href="https://pet-boutique99.netlify.app/" target="_blank">Ver Projeto</a>
+</div>
+</div>
+
+
+<!-- CAFETERIA -->
+
+<div class="projeto">
+<img src="img/cafeteriamanhattan.png" class="preview">
+<div class="content">
+<h2>Cafeteria Manhattan</h2>
+<p>
+Website institucional para cafeteria com apresentação de produtos e informações do local.
+</p>
+<p class="tech">Tecnologias: HTML, CSS</p>
+<a class="link" href="https://cafeteriamanhattann.netlify.app/" target="_blank">Ver Projeto</a>
+</div>
+</div>
+
+
+<!-- HOSPEDAGEM -->
+
+<div class="projeto">
+<img src="img/slimhospedagem.png" class="preview">
+<div class="content">
+<h2>Slim Hospedagem de Sites</h2>
+<p>
+Website institucional desenvolvido para apresentação de serviços de hospedagem de sites.
+</p>
+<p class="tech">Tecnologias: HTML, CSS</p>
+<a class="link" href="https://slimhospedagemsites.netlify.app/" target="_blank">Ver Projeto</a>
+</div>
+</div>
+
+<hr style="margin:40px 0;border:none;border-top:1px solid #ddd;">
+
+<!-- GITHUB -->
+
+<div class="projeto">
+
+<div class="preview github-preview">
+
+<a href="https://escala3x3.netlify.app/2026.html" target="_blank">
+<img src="img/escala3x3.png" alt="Escala 3x3">
+</a>
+
+<a href="https://pousadasecretslim.netlify.app/" target="_blank">
+<img src="img/pousadasecret.png" alt="Pousada Secret">
+</a>
+
+<a href="https://fernandors99.github.io/Projeto-Neymar-bio/" target="_blank">
+<img src="img/neymarbio.png" alt="Projeto Neymar">
+</a>
+
+</div>
+
+<div class="content">
+
+<h2>Projetos no GitHub</h2>
+
+<p>
+Repositório com projetos e códigos desenvolvidos durante meus estudos em programação.
+</p>
+
+<p class="tech">
+Tecnologias: HTML, CSS, JavaScript, Git
+</p>
+
+<a class="link" href="https://github.com/FernandoRS99?tab=repositories" target="_blank">
+Ver GitHub
+</a>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
+```
