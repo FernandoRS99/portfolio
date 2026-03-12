@@ -2,7 +2,7 @@
 
 Portfólio desenvolvido para apresentar projetos criados durante meus estudos em desenvolvimento web.
 
-Sou Técnico Eletromecânico com mais de 17 anos de experiência em manutenção industrial e atualmente curso Engenharia da Computação, explorando também o desenvolvimento de aplicações web e ferramentas digitais voltadas para processos industriais.
+Sou Técnico Eletromecânico com mais de 19 anos de experiência em manutenção industrial e atualmente curso Engenharia da Computação, explorando também o desenvolvimento de aplicações web e ferramentas digitais voltadas para processos industriais.
 
 ---
 
