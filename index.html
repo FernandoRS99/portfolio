@@ -13,6 +13,7 @@ body{
 font-family: Arial, Helvetica, sans-serif;
 margin:0;
 background:#f4f4f4;
+padding-top:120px;
 }
 
 .container{
@@ -21,6 +22,94 @@ margin:auto;
 background:white;
 padding:40px;
 position:relative;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:linear-gradient(135deg,#0F766E,#115E59);
+box-shadow:0 3px 12px rgba(0,0,0,0.25);
+z-index:1000;
+}
+
+.nav-container{
+max-width:1100px;
+margin:auto;
+display:flex;
+align-items:center;
+padding:18px 30px;
+}
+
+.logo a{
+font-size:22px;
+font-weight:700;
+color:white;
+text-decoration:none;
+}
+
+.pdf-btn{
+position:absolute;
+top:35px;
+right:40px;
+
+background:#115E59;
+color:white;
+
+border:none;
+padding:8px 14px;
+
+border-radius:6px;
+font-size:13px;
+font-weight:600;
+
+cursor:pointer;
+transition:0.25s;
+
+box-shadow:0 2px 6px rgba(0,0,0,0.15);
+}
+
+.pdf-btn:hover{
+background:#0F766E;
+transform:scale(1.05);
+}
+
+.menu{
+display:flex;
+flex:1;
+justify-content:space-around;
+align-items:center;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:16px;
+font-weight:500;
+position:relative;
+padding:6px 10px;
+transition:0.2s;
+}
+.menu a::after{
+content:"";
+position:absolute;
+width:0;
+height:2px;
+left:0;
+bottom:-4px;
+background:white;
+transition:0.25s;
+}
+
+.menu a:hover::after{
+width:100%;
+}
+
+.menu a:hover{
+opacity:0.9;
 }
 
 h1{
@@ -68,19 +157,21 @@ text-decoration:underline;
 
 .button{
 position:fixed;
-top:20px;
+top:18px;
 right:20px;
-padding:12px 20px;
-background:#0077cc;
+padding:8px 14px;
+background:#115E59;
 color:white;
 border:none;
-border-radius:5px;
+border-radius:6px;
 cursor:pointer;
-font-size:14px;
+font-size:13px;
+opacity:0.85;
+transition:0.2s;
 }
 
 .button:hover{
-background:#005fa3;
+opacity:1;
 }
 
 .portfolio-btn{
@@ -148,13 +239,29 @@ page-break-after: avoid;
 
 <body>
 
+
 <button class="button" onclick="window.print()">Baixar PDF</button>
+<nav class="navbar">
+
+<div class="nav-container">
+
+<div class="menu">
+
+
+<a href="portfolios.html">Portfólio</a>
+<a href="https://github.com/FernandoRS99" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/fernandoroquedossantos" target="_blank">LinkedIn</a>
+
+</div>
+
+</div>
+
+</nav>
+
 
 <div class="container">
 
-<a href="portfolios.html" class="portfolio-btn">
-🚀 Portfólio
-</a>
+<button class="pdf-btn" onclick="window.print()">⬇ PDF</button>
 
 <h1>Fernando Roque dos Santos</h1>
 
@@ -301,7 +408,6 @@ Gestão de ordens de manutenção via SAP e elaboração de relatórios técnico
 
 </div>
 
-
 <div class="job">
 
 <div class="job-title">
@@ -336,7 +442,6 @@ Projetos de nacionalização e recuperação de peças mecânicas.
 
 </div>
 
-
 <div class="job">
 
 <div class="job-title">
@@ -357,7 +462,6 @@ Eletromecânico – Polionda
 
 </div>
 
-
 <h2>Formação Acadêmica</h2>
 
 <ul>
@@ -374,7 +478,6 @@ Conclusão: 2011
 </li>
 
 </ul>
-
 
 <h2>Certificações e Cursos</h2>
 
@@ -396,7 +499,6 @@ Conclusão: 2011
 
 </ul>
 
-
 <h2>Idiomas</h2>
 
 <ul>
@@ -408,7 +510,6 @@ e conversação básica.
 </li>
 
 </ul>
-
 
 </div>
 

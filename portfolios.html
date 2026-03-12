@@ -8,10 +8,12 @@
 
 <style>
 
-/* ===== RESET BÁSICO ===== */
+/* ===== RESET ===== */
 
 *{
 box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 html{
@@ -19,10 +21,9 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family: Arial, Helvetica, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 background:#f4f4f4;
-margin:0;
-padding-top:65px; /* espaço da navbar */
+padding-top:90px;
 }
 
 
@@ -52,25 +53,22 @@ z-index:1000;
 max-width:1100px;
 margin:auto;
 display:flex;
-justify-content:space-between;
 align-items:center;
 padding:18px 30px;
 }
-
-/* LOGO */
 
 .logo a{
 font-size:22px;
 font-weight:700;
 color:white;
+text-decoration:none;
 }
-
-
-/* MENU */
 
 .menu{
 display:flex;
-gap:28px;
+flex:1;
+justify-content:space-around;
+align-items:center;
 }
 
 .menu a{
@@ -79,15 +77,14 @@ text-decoration:none;
 font-size:16px;
 font-weight:500;
 position:relative;
+padding:6px 10px;
 transition:0.2s;
 }
-
-/* efeito underline elegante */
 
 .menu a::after{
 content:"";
 position:absolute;
-width:0%;
+width:0;
 height:2px;
 left:0;
 bottom:-4px;
@@ -101,12 +98,6 @@ width:100%;
 
 .menu a:hover{
 opacity:0.9;
-}
-
-/* espaço para navbar fixa */
-
-body{
-padding-top:90px;
 }
 
 
@@ -133,7 +124,7 @@ flex:1;
 }
 
 .bio h2{
-margin:0 0 8px 0;
+margin-bottom:8px;
 }
 
 .bio-links a{
@@ -163,37 +154,46 @@ height:28px;
 }
 
 
-/* ===== PROJETOS DESTAQUE ===== */
+/* ===== DESTAQUES ===== */
+
+.titulo-destaques{
+text-align:center;
+margin:30px 0 20px 0;
+font-size:22px;
+}
 
 .destaques{
 display:flex;
-gap:15px;
-margin:20px 0 40px 0;
+justify-content:center;
+gap:20px;
 flex-wrap:wrap;
+margin-bottom:40px;
 }
 
-.destaques a{
-display:block;
-border:1px solid #ddd;
-border-radius:6px;
-overflow:hidden;
+.destaque-card{
+max-width:280px;
+text-align:center;
 }
 
-.destaques img{
-width:200px;
-height:120px;
-object-fit:cover;
-display:block;
-cursor:pointer;
-transition:transform 0.2s;
+.destaque-card img{
+width:100%;
+border-radius:8px;
+transition:0.2s;
 }
 
-.destaques img:hover{
+.destaque-card img:hover{
 transform:scale(1.05);
 }
 
+.destaque-card p{
+margin-top:8px;
+font-weight:600;
+color:#444;
+font-size:14px;
+}
 
-/* ===== TÍTULO ===== */
+
+/* ===== TÍTULOS ===== */
 
 h1{
 text-align:center;
@@ -221,7 +221,6 @@ background:white;
 padding:20px;
 box-shadow:0 2px 6px rgba(0,0,0,0.08);
 align-items:center;
-
 opacity:0;
 transform:translateY(20px);
 animation:fadeUp 0.6s ease forwards;
@@ -234,7 +233,6 @@ animation:fadeUp 0.6s ease forwards;
 
 .projeto:hover{
 transform:translateY(-4px);
-transition:0.25s;
 box-shadow:0 8px 18px rgba(0,0,0,0.15);
 }
 
@@ -267,7 +265,7 @@ height:100%;
 object-fit:cover;
 border-radius:4px;
 cursor:pointer;
-transition:transform 0.2s;
+transition:0.2s;
 }
 
 .github-preview img:hover{
@@ -325,8 +323,6 @@ transform:translateY(0);
 
 /* ===== RESPONSIVO ===== */
 
-/* tablets */
-
 @media(max-width:900px){
 
 .container{
@@ -335,7 +331,8 @@ padding:30px 20px;
 
 .header{
 flex-direction:column;
-align-items:flex-start;
+align-items:center;
+text-align:center;
 }
 
 .projeto{
@@ -348,22 +345,21 @@ width:100%;
 height:auto;
 }
 
-.destaques img{
-width:100%;
-max-width:260px;
-height:auto;
+.destaques{
+flex-direction:column;
+align-items:center;
 }
 
 }
 
 
-/* celulares */
+/* ===== MOBILE ===== */
 
 @media(max-width:600px){
 
- body{
+body{
 padding-top:140px;
-}   
+}
 
 .nav-container{
 flex-direction:column;
@@ -371,7 +367,6 @@ gap:8px;
 }
 
 .menu{
-display:flex;
 flex-wrap:wrap;
 justify-content:center;
 }
@@ -386,14 +381,8 @@ height:90px;
 margin-top:10px;
 }
 
-/* BADGES MOBILE */
-
 .skills{
-display:flex;
-flex-wrap:wrap;
 justify-content:center;
-align-items:center;
-gap:10px;
 max-width:360px;
 margin:15px auto;
 }
@@ -402,42 +391,10 @@ margin:15px auto;
 height:24px;
 }
 
-.header{
-flex-direction:column;
-align-items:center;
-text-align:center;
-gap:15px;
-}
-
-/* centraliza os projetos destaque */
-
-.destaques{
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:18px;
-}
-
-/* controla tamanho das imagens */
-
-.destaques img{
-width:100%;
-max-width:320px;
-height:auto;
-border-radius:8px;
-padding: auto;
-}
-
-.projeto{
-flex-direction:column;
-align-items:flex-start;
-}
-
 .preview{
 width:100%;
 height:auto;
 }
-
 
 }
 
@@ -451,14 +408,10 @@ height:auto;
 
 <div class="nav-container">
 
-<div class="logo">
-<a href="index.html">Fernando Roque</a>
-</div>
-
 <div class="menu">
 
-<a href="#projetos">Projetos</a>
-<a href="portfolios.html">Portfólio</a>
+
+<a href="index.html">Currículo</a>
 <a href="https://github.com/FernandoRS99" target="_blank">GitHub</a>
 <a href="https://www.linkedin.com/in/fernandoroquedossantos" target="_blank">LinkedIn</a>
 
@@ -495,13 +448,13 @@ Desenvolvo aplicações web e ferramentas voltadas para processos industriais e 
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
 
-<img src="https://img.shields.io/badge/SAP-0FAAFF?style=for-the-badge&logo=sap&logoColor=white">
+<img src="https://img.shields.io/badge/SAP-0FAAFF?style=for-the-badge&logo=sap&logoColor=gray">
 
 <img src="https://img.shields.io/badge/HTA-Windows-blue?style=for-the-badge">
 
-<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=gray">
 
-<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white">
+<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=gray">
 
 </div>
 
@@ -519,20 +472,30 @@ Desenvolvo aplicações web e ferramentas voltadas para processos industriais e 
 
 
 <!-- PROJETOS EM DESTAQUE -->
+<h2 class="titulo-destaques">Projetos em Destaque</h2>
 
 <div class="destaques">
 
+<div class="destaque-card">
 <a href="https://escala3x3.netlify.app/2026.html" target="_blank">
-<img src="img/escala3x3.png">
+<img src="img/escala3x3.png" alt="Escala 3x3">
 </a>
+<p>Escala de Trabalho 3x3</p>
+</div>
 
-<a href="https://pousadasecretslim.netlify.app/" target="_blank">
-<img src="img/pousadasecret.png">
+<div class="destaque-card">
+<a href="https://iw41slim.netlify.app/" target="_blank">
+<img src="img/iw41app.png" alt="iw41app">
 </a>
+<p>SAP IW41 - apontamento de ordens automático</p>
+</div>
 
+<div class="destaque-card">
 <a href="https://fernandors99.github.io/Projeto-Neymar-bio/" target="_blank">
-<img src="img/neymarbio.png">
+<img src="img/neymarbio.png" alt="Neymar Bio">
 </a>
+<p>Neymar Bio</p>
+</div>
 
 </div>
 
