@@ -6,6 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfólio - Fernando Roque</title>
 
+<!-- Meta description para SEO e LinkedIn -->
+<meta name="description" content="Portfólio de Fernando Roque dos Santos — Técnico Eletromecânico e estudante de Engenharia da Computação. Projetos web com HTML, CSS, JavaScript e Python voltados para automação industrial.">
+
+<!-- Open Graph para preview bonito no LinkedIn -->
+<meta property="og:title" content="Portfólio - Fernando Roque dos Santos">
+<meta property="og:description" content="Técnico Eletromecânico com 19+ anos de experiência e desenvolvedor web. Veja meus projetos voltados para automação e processos industriais.">
+<meta property="og:image" content="https://fernandoroque.netlify.app/img/perfil.png">
+<meta property="og:url" content="https://fernandoroque.netlify.app/portfolios.html">
+<meta property="og:type" content="website">
+
 <style>
 
 /* ===== RESET ===== */
@@ -57,11 +67,13 @@ align-items:center;
 padding:18px 30px;
 }
 
+/* CORRIGIDO: logo agora está ativo no HTML também */
 .logo a{
 font-size:22px;
 font-weight:700;
 color:white;
 text-decoration:none;
+white-space:nowrap;
 }
 
 .menu{
@@ -224,17 +236,24 @@ align-items:center;
 opacity:0;
 transform:translateY(20px);
 animation:fadeUp 0.6s ease forwards;
+/* CORRIGIDO: transition separado do transform da animação */
+transition:box-shadow 0.25s ease;
 }
 
+/* CORRIGIDO: hover usando apenas box-shadow, sem conflito com o transform da animação */
+.projeto:hover{
+box-shadow:0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* CORRIGIDO: delays para todos os 8 cards */
+.projeto:nth-child(1){animation-delay:0.0s;}
 .projeto:nth-child(2){animation-delay:0.1s;}
 .projeto:nth-child(3){animation-delay:0.2s;}
 .projeto:nth-child(4){animation-delay:0.3s;}
 .projeto:nth-child(5){animation-delay:0.4s;}
-
-.projeto:hover{
-transform:translateY(-4px);
-box-shadow:0 8px 18px rgba(0,0,0,0.15);
-}
+.projeto:nth-child(6){animation-delay:0.5s;}
+.projeto:nth-child(7){animation-delay:0.6s;}
+.projeto:nth-child(8){animation-delay:0.7s;}
 
 
 /* ===== PREVIEW ===== */
@@ -307,6 +326,26 @@ transition:0.25s;
 
 .link:hover{
 background:#005fa3;
+transform:scale(1.05);
+}
+
+/* Botão secundário (GitHub) */
+.link-secondary{
+display:inline-block;
+margin-top:15px;
+margin-left:10px;
+padding:10px 16px;
+background:transparent;
+color:#0077cc;
+text-decoration:none;
+border-radius:6px;
+font-size:14px;
+border:1px solid #0077cc;
+transition:0.25s;
+}
+
+.link-secondary:hover{
+background:#e8f4ff;
 transform:scale(1.05);
 }
 
@@ -408,13 +447,15 @@ height:auto;
 
 <div class="nav-container">
 
+<!-- CORRIGIDO: logo agora aparece na navbar -->
+<div class="logo">
+  <a href="#topo">Fernando Roque</a>
+</div>
+
 <div class="menu">
-
-
-<a href="index.html">Currículo</a>
-<a href="https://github.com/FernandoRS99" target="_blank">GitHub</a>
-<a href="https://www.linkedin.com/in/fernandoroquedossantos" target="_blank">LinkedIn</a>
-
+  <a href="index.html">Currículo</a>
+  <a href="https://github.com/FernandoRS99" target="_blank">GitHub</a>
+  <a href="https://www.linkedin.com/in/fernandoroquedossantos" target="_blank">LinkedIn</a>
 </div>
 
 </div>
@@ -427,7 +468,8 @@ height:auto;
 
 <div class="header">
 
-<img src="img/perfil.png" class="foto">
+<!-- CORRIGIDO: alt adicionado na foto de perfil -->
+<img src="img/perfil.png" class="foto" alt="Foto de perfil de Fernando Roque dos Santos">
 
 <div class="bio">
 
@@ -440,21 +482,21 @@ Desenvolvo aplicações web e ferramentas voltadas para processos industriais e 
 
 <div class="skills">
 
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
 
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
 
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
 
-<img src="https://img.shields.io/badge/SAP-0FAAFF?style=for-the-badge&logo=sap&logoColor=gray">
+<img src="https://img.shields.io/badge/SAP-0FAAFF?style=for-the-badge&logo=sap&logoColor=gray" alt="SAP">
 
-<img src="https://img.shields.io/badge/HTA-Windows-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/HTA-Windows-blue?style=for-the-badge" alt="HTA Windows">
 
-<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=gray">
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=gray" alt="Git">
 
-<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=gray">
+<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=gray" alt="Netlify">
 
 </div>
 
@@ -478,23 +520,23 @@ Desenvolvo aplicações web e ferramentas voltadas para processos industriais e 
 
 <div class="destaque-card">
 <a href="https://escala3x3.netlify.app/2026.html" target="_blank">
-<img src="img/escala3x3.png" alt="Escala 3x3">
+<img src="img/escala3x3.png" alt="Escala 3x3" loading="lazy">
 </a>
 <p>Escala de Trabalho 3x3</p>
 </div>
 
 <div class="destaque-card">
 <a href="https://iw41slim.netlify.app/" target="_blank">
-<img src="img/iw41app.png" alt="iw41app">
+<img src="img/iw41app.png" alt="IW41 App" loading="lazy">
 </a>
 <p>SAP IW41 - apontamento de ordens automático</p>
 </div>
 
 <div class="destaque-card">
-<a href="https://fernandors99.github.io/Projeto-Neymar-bio/" target="_blank">
-<img src="img/neymarbio.png" alt="Neymar Bio">
+<a href="https://fernandors99.github.io/DashPcmSite/" target="_blank">
+<img src="img/dashsite.png" alt="PCM Viewer Demo" loading="lazy">
 </a>
-<p>Neymar Bio</p>
+<p>PCM Viewer — Dashboard de Manutenção</p>
 </div>
 
 </div>
@@ -503,15 +545,33 @@ Desenvolvo aplicações web e ferramentas voltadas para processos industriais e 
 <h1 id="projetos">Portfólio de Projetos</h1>
 
 <p style="text-align:center;color:#666;margin-top:-20px;margin-bottom:30px;">
-Projetos desenvolvidos durante meus estudos em desenvolvimento web versionados no Netlify
+Projetos desenvolvidos durante meus estudos em desenvolvimento web versionados no Netlify e GitHub Pages
 </p>
 
 <div class="grid">
 
+<!-- PCM VIEWER — NOVO CARD -->
+
+<div class="projeto">
+<img src="img/dashsite.png" class="preview" alt="PCM Viewer Demo — Dashboard de leitura executiva do PCM" loading="lazy">
+<div class="content">
+<h2>PCM Viewer — Dashboard de Manutenção</h2>
+<p>
+Dashboard de leitura executiva para Planejamento e Controle de Manutenção (PCM).
+Versão estática de demonstração com KPIs, ranking por técnico, cadência operacional diária
+e histórico de ordens de serviço — sem backend, pronto para GitHub Pages.
+</p>
+<p class="tech">Tecnologias: HTML, CSS, JavaScript, GitHub Pages</p>
+<a class="link" href="https://fernandors99.github.io/DashPcmSite/" target="_blank">Ver Projeto</a>
+<a class="link-secondary" href="https://github.com/FernandoRS99/DashPcmSite" target="_blank">Ver Código</a>
+</div>
+</div>
+
+
 <!-- ESCALA 3X3 -->
 
 <div class="projeto">
-<img src="img/escala3x3.png" class="preview">
+<img src="img/escala3x3.png" class="preview" alt="Escala de Trabalho 3x3" loading="lazy">
 <div class="content">
 <h2>Escala de Trabalho 3x3</h2>
 <p>
@@ -527,7 +587,7 @@ utilizando um calendário mensal com identificação visual por cores para facil
 <!-- IW41 -->
 
 <div class="projeto">
-<img src="img/iw41app.png" class="preview">
+<img src="img/iw41app.png" class="preview" alt="IW41 App — apontamento de ordens SAP" loading="lazy">
 <div class="content">
 <h2>IW41 App</h2>
 <p>
@@ -543,7 +603,7 @@ relacionadas à transação IW41 do SAP.
 <!-- POUSADA -->
 
 <div class="projeto">
-<img src="img/pousadasecret.png" class="preview">
+<img src="img/pousadasecret.png" class="preview" alt="Pousada Secret — website institucional" loading="lazy">
 <div class="content">
 <h2>Pousada Secret</h2>
 <p>
@@ -559,7 +619,7 @@ com foco em divulgação de hospedagem e informações para visitantes.
 <!-- PET -->
 
 <div class="projeto">
-<img src="img/petboutique.png" class="preview">
+<img src="img/petboutique.png" class="preview" alt="Pet Boutique — website para pet shop" loading="lazy">
 <div class="content">
 <h2>Pet Boutique</h2>
 <p>
@@ -574,7 +634,7 @@ Website institucional para pet shop com apresentação de serviços e produtos.
 <!-- CAFETERIA -->
 
 <div class="projeto">
-<img src="img/cafeteriamanhattan.png" class="preview">
+<img src="img/cafeteriamanhattan.png" class="preview" alt="Cafeteria Manhattan — website institucional" loading="lazy">
 <div class="content">
 <h2>Cafeteria Manhattan</h2>
 <p>
@@ -589,7 +649,7 @@ Website institucional para cafeteria com apresentação de produtos e informaç�
 <!-- HOSPEDAGEM -->
 
 <div class="projeto">
-<img src="img/slimhospedagem.png" class="preview">
+<img src="img/slimhospedagem.png" class="preview" alt="Slim Hospedagem de Sites — website institucional" loading="lazy">
 <div class="content">
 <h2>Slim Hospedagem de Sites</h2>
 <p>
@@ -608,16 +668,16 @@ Website institucional desenvolvido para apresentação de serviços de hospedage
 
 <div class="preview github-preview">
 
+<a href="https://fernandors99.github.io/DashPcmSite/" target="_blank">
+<img src="img/dashsite.png" alt="PCM Viewer" loading="lazy">
+</a>
+
 <a href="https://escala3x3.netlify.app/2026.html" target="_blank">
-<img src="img/escala3x3.png" alt="Escala 3x3">
+<img src="img/escala3x3.png" alt="Escala 3x3" loading="lazy">
 </a>
 
 <a href="https://pousadasecretslim.netlify.app/" target="_blank">
-<img src="img/pousadasecret.png" alt="Pousada Secret">
-</a>
-
-<a href="https://fernandors99.github.io/Projeto-Neymar-bio/" target="_blank">
-<img src="img/neymarbio.png" alt="Projeto Neymar">
+<img src="img/pousadasecret.png" alt="Pousada Secret" loading="lazy">
 </a>
 
 </div>
@@ -631,7 +691,7 @@ Repositório com projetos e códigos desenvolvidos durante meus estudos em progr
 </p>
 
 <p class="tech">
-Tecnologias: HTML, CSS, JavaScript, Git
+Tecnologias: HTML, CSS, JavaScript, Git, GitHub Pages
 </p>
 
 <a class="link" href="https://github.com/FernandoRS99?tab=repositories" target="_blank">
