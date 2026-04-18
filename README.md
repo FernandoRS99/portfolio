@@ -6,11 +6,13 @@ Sou Técnico Eletromecânico com mais de 19 anos de experiência em manutenção
 
 ---
 
-## Portfólio Online
+## Projeto Online
 
-Acesse o portfólio publicado:
+Acesse as versões publicadas:
 
-https://fernandors99.github.io/portfolio
+- Portfólio de Projetos: https://fernandoroque.netlify.app/
+- Currículo Online: https://fernandoroque.netlify.app/curriculo.html
+- Espelho GitHub Pages: https://fernandors99.github.io/portfolio/
 
 ---
 
@@ -20,6 +22,7 @@ https://fernandors99.github.io/portfolio
 - CSS3
 - JavaScript
 - Git
+- GitHub Pages
 - Netlify
 
 ---
@@ -68,8 +71,14 @@ Código versionado utilizando Git e hospedado no GitHub.
 
 Fernando Roque dos Santos
 
-Portfólio
+Portfólio de Projetos  
 https://fernandoroque.netlify.app/
+
+Currículo Online  
+https://fernandoroque.netlify.app/curriculo.html
+
+GitHub Pages  
+https://fernandors99.github.io/portfolio/
 
 GitHub  
 https://github.com/FernandoRS99

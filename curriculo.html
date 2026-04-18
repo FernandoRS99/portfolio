@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fernando Roque dos Santos - Currículo</title>
+
+<style>
+
+:root{
+--bg:#eef3f2;
+--surface:#ffffff;
+--text:#1f2937;
+--muted:#52606d;
+--border:#d8e1e3;
+--accent:#115E59;
+--accent-strong:#0F766E;
+--shadow:0 20px 45px rgba(15,23,42,0.12);
+}
+
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:108px 20px 32px;
+min-height:100vh;
+background:linear-gradient(180deg,#ecf4f2 0%, #f7f8f8 38%, #edf1f3 100%);
+color:var(--text);
+line-height:1.55;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:var(--surface);
+padding:40px;
+border-radius:18px;
+box-shadow:var(--shadow);
+}
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:linear-gradient(135deg,#0F766E,#115E59);
+box-shadow:0 3px 12px rgba(0,0,0,0.25);
+z-index:1000;
+}
+
+.nav-container{
+max-width:1100px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+padding:16px 24px;
+}
+
+.brand{
+font-size:22px;
+font-weight:700;
+color:white;
+text-decoration:none;
+white-space:nowrap;
+}
+
+.menu{
+display:flex;
+flex:1;
+justify-content:center;
+align-items:center;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:16px;
+font-weight:500;
+position:relative;
+padding:6px 10px;
+transition:opacity 0.2s ease;
+}
+
+.menu a::after{
+content:"";
+position:absolute;
+width:0;
+height:2px;
+left:0;
+bottom:-4px;
+background:white;
+transition:width 0.25s ease;
+}
+
+.menu a:hover::after{
+width:100%;
+}
+
+.menu a:hover{
+opacity:0.9;
+}
+
+.pdf-trigger{
+background:white;
+color:var(--accent);
+border:none;
+padding:10px 16px;
+border-radius:999px;
+font-size:13px;
+font-weight:700;
+cursor:pointer;
+box-shadow:0 2px 10px rgba(0,0,0,0.15);
+transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pdf-trigger:hover{
+transform:translateY(-1px);
+box-shadow:0 6px 18px rgba(0,0,0,0.18);
+}
+
+.page-header{
+padding-bottom:24px;
+margin-bottom:20px;
+border-bottom:1px solid var(--border);
+}
+
+.eyebrow{
+margin:0 0 6px;
+font-size:11px;
+font-weight:700;
+letter-spacing:0.08em;
+text-transform:uppercase;
+color:var(--accent);
+}
+
+h1{
+margin:0 0 10px;
+font-size:34px;
+line-height:1.08;
+}
+
+.headline{
+margin:0 0 8px;
+color:var(--text);
+font-size:16px;
+font-weight:700;
+}
+
+.lead{
+margin:0 0 10px;
+max-width:none;
+color:var(--muted);
+font-size:15px;
+}
+
+.contact-list{
+display:flex;
+flex-direction:column;
+gap:4px;
+margin-bottom:24px;
+font-size:14px;
+color:var(--text);
+}
+
+.contact-line{
+margin:0;
+}
+
+.contact-line .link{
+word-break:break-all;
+}
+
+h2{
+margin:30px 0 14px;
+padding-bottom:6px;
+border-bottom:2px solid var(--border);
+font-size:22px;
+color:var(--accent);
+}
+
+p{
+margin:0 0 12px;
+}
+
+ul{
+margin:0 0 10px;
+padding-left:20px;
+}
+
+li{
+margin-bottom:8px;
+}
+
+.job{
+margin-top:22px;
+padding:18px 18px 8px;
+border:1px solid var(--border);
+border-radius:14px;
+background:#fcfcfc;
+page-break-inside:avoid;
+break-inside:avoid;
+}
+
+.job-title{
+font-weight:700;
+font-size:17px;
+}
+
+.job-meta{
+margin-bottom:12px;
+color:var(--muted);
+font-weight:600;
+}
+
+.link{
+color:#0b69a3;
+text-decoration:none;
+word-break:break-word;
+}
+
+.link:hover{
+text-decoration:underline;
+}
+
+.no-print{
+display:initial;
+}
+
+.page-break-before{
+break-before:auto;
+page-break-before:auto;
+}
+
+@page{
+size:A4;
+margin:12mm 14mm;
+}
+
+@media(max-width:900px){
+
+body{
+padding-top:132px;
+}
+
+.container{
+padding:32px 24px;
+}
+
+.nav-container{
+padding:14px 18px;
+}
+
+}
+
+@media(max-width:640px){
+
+body{
+padding:150px 12px 20px;
+}
+
+.nav-container{
+flex-direction:column;
+align-items:stretch;
+}
+
+.brand{
+text-align:center;
+}
+
+.menu{
+justify-content:center;
+}
+
+.pdf-trigger{
+width:100%;
+}
+
+.container{
+padding:26px 18px;
+border-radius:14px;
+}
+
+h1{
+font-size:28px;
+}
+
+.lead{
+font-size:15px;
+}
+
+.headline{
+font-size:15px;
+}
+
+.contact-list{
+font-size:13px;
+}
+
+}
+
+@media print{
+
+html,
+body{
+background:white;
+-webkit-print-color-adjust:exact;
+print-color-adjust:exact;
+}
+
+body{
+padding:0;
+font-size:11.25pt;
+line-height:1.42;
+color:#000;
+text-rendering:optimizeLegibility;
+}
+
+.no-print,
+.navbar{
+display:none !important;
+}
+
+.container{
+max-width:100%;
+padding:0;
+border-radius:0;
+box-shadow:none;
+}
+
+.page-header{
+margin-bottom:16px;
+padding-bottom:16px;
+border-bottom:1px solid #aebdc2;
+}
+
+h1{
+font-size:25pt;
+margin-bottom:6px;
+color:#000;
+}
+
+.headline{
+margin-bottom:6px;
+font-size:12pt;
+font-weight:700;
+color:#111;
+}
+
+.lead{
+max-width:none;
+font-size:11pt;
+margin-bottom:8px;
+color:#111;
+}
+
+h2{
+margin:18px 0 8px;
+padding-bottom:4px;
+font-size:14pt;
+color:#000;
+border-bottom-color:#b5c2c6;
+page-break-after:avoid;
+break-after:avoid-page;
+}
+
+p,
+li{
+orphans:3;
+widows:3;
+color:#000;
+}
+
+ul{
+padding-left:18px;
+}
+
+.contact-list{
+gap:2px;
+margin-bottom:16px;
+font-size:10.5pt;
+color:#000;
+}
+
+.contact-line .link{
+text-decoration:underline;
+text-decoration-thickness:1px;
+}
+
+.job{
+margin-top:14px;
+padding:12px 12px 2px;
+border-radius:10px;
+box-shadow:none;
+border-color:#b8c4c8;
+background:white;
+}
+
+.job-title{
+color:#000;
+font-size:12pt;
+}
+
+.job-meta{
+color:#111;
+font-weight:700;
+}
+
+.page-break-before{
+break-before:page;
+page-break-before:always;
+}
+
+.link{
+color:#0a3b66;
+text-decoration:underline;
+text-decoration-thickness:1px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar no-print">
+
+<div class="nav-container">
+
+<a class="brand" href="#topo">Fernando Roque</a>
+
+<div class="menu">
+<a href="index.html">Portfólio</a>
+<a href="https://github.com/FernandoRS99" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://www.linkedin.com/in/fernandoroquedossantos" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+
+<button class="pdf-trigger" type="button" onclick="printCurriculo()">Baixar PDF</button>
+
+</div>
+
+</nav>
+
+
+<main class="container" id="topo">
+
+<header class="page-header">
+
+<div class="identity">
+<p class="eyebrow">Currículo</p>
+<h1>Fernando Roque dos Santos</h1>
+<p class="headline">Técnico Eletromecânico | Manutenção Industrial | Automação | PCM | Desenvolvimento Web</p>
+<p class="lead">
+Técnico Eletromecânico com mais de 19 anos de experiência em manutenção industrial,
+automação e PCM, com atuação prática em utilidades, SAP e melhoria contínua.
+</p>
+</div>
+
+</header>
+
+<div class="info contact-list">
+<p class="contact-line">São José dos Pinhais – PR | (41) 99647-2197 | CNH: Categoria B</p>
+<p class="contact-line">
+<a class="link" href="mailto:fernando_roquedossantos@hotmail.com">fernando_roquedossantos@hotmail.com</a> |
+<a class="link" href="https://www.linkedin.com/in/fernandoroquedossantos" target="_blank" rel="noopener noreferrer">linkedin.com/in/fernandoroquedossantos</a>
+</p>
+<p class="contact-line">
+Portfólio:
+<a class="link" href="https://fernandoroque.netlify.app/" target="_blank" rel="noopener noreferrer">https://fernandoroque.netlify.app/</a>
+</p>
+</div>
+
+
+<h2>Resumo Profissional</h2>
+
+<p>
+Técnico Eletromecânico com mais de <strong>19 anos de experiência em manutenção industrial</strong>,
+atuando nos setores químico, cosmético e manufatura. Especialista em manutenção preventiva
+e corretiva de equipamentos eletromecânicos com forte atuação em sistemas de utilidades
+industriais como Estações de Tratamento de Água (ETA) e Estações de Tratamento de
+Efluentes (ETE).
+</p>
+
+<p>
+Experiência em automação industrial com CLPs Siemens, sensores industriais e
+instrumentação de campo. Conhecimento em inversores de frequência e soft starters
+das marcas Siemens, WEG, Danfoss, ABB, Allen-Bradley e Schneider Electric.
+Vivência em Planejamento e Controle de Manutenção (PCM), análise de falhas e
+utilização de sistemas ERP como SAP e TOTVS Datasul.
+</p>
+
+
+<h2>Especialidades Técnicas</h2>
+
+<ul>
+
+<li>
+<strong>Manutenção Industrial:</strong>
+Manutenção preventiva e corretiva de equipamentos industriais com foco na
+confiabilidade operacional e aumento da disponibilidade dos ativos.
+</li>
+
+<li>
+<strong>Automação Industrial:</strong>
+Atuação em sistemas automatizados com CLPs Siemens, sensores industriais
+e instrumentação de campo.
+</li>
+
+<li>
+<strong>Desenvolvimento Web Front-End:</strong>
+Criação de interfaces web responsivas com HTML5, CSS3 e JavaScript,
+com foco em usabilidade, organização visual e apresentação de informações.
+</li>
+
+<li>
+<strong>Publicação e Versionamento:</strong>
+Versionamento com Git e GitHub, além de publicação e manutenção de projetos
+em GitHub Pages e Netlify.
+</li>
+
+<li>
+<strong>Sistemas de Utilidades Industriais:</strong>
+Experiência em ETA, ETE, caldeiras, geração de vapor, compressores
+e sistemas de ar comprimido.
+</li>
+
+<li>
+<strong>PCM – Planejamento e Controle de Manutenção:</strong>
+Planejamento de manutenção preventiva e corretiva, análise de backlog
+e indicadores como MTBF e MTTR.
+</li>
+
+<li>
+<strong>Gestão de Manutenção:</strong>
+Coordenação de atividades de manutenção, acompanhamento de serviços
+terceirizados e suporte técnico em projetos de melhoria.
+</li>
+
+<li>
+<strong>ERP e Sistemas de Gestão:</strong>
+Experiência com SAP e TOTVS Datasul aplicados à manutenção industrial.
+</li>
+
+<li>
+<strong>Ferramentas Web para Processos Industriais:</strong>
+Desenvolvimento de aplicações e interfaces de apoio a rotinas de manutenção,
+PCM e apontamentos relacionados ao ambiente SAP.
+</li>
+
+<li>
+<strong>Lean e Ferramentas da Qualidade:</strong>
+Aplicação de PDCA, 5W2H, Kaizen e Ishikawa para melhoria contínua.
+</li>
+
+<li>
+<strong>Leitura e Interpretação Técnica:</strong>
+Interpretação de diagramas elétricos, hidráulicos, pneumáticos
+e desenhos mecânicos.
+</li>
+
+</ul>
+
+
+<h2>Experiência Profissional</h2>
+
+<div class="job">
+
+<div class="job-title">
+Eletromecânico Industrial – In-Haus Industrial (Grupo Boticário)
+</div>
+
+<p class="job-meta">São José dos Pinhais – PR | 09/2023 – Atual</p>
+
+<ul>
+
+<li>
+Manutenção preventiva e corretiva de sistemas eletromecânicos industriais,
+com foco em instalações elétricas, painéis elétricos, subestações e grupos geradores.
+</li>
+
+<li>
+Atuação em sistemas de utilidades industriais como ETA, ETE,
+geração de vapor, ar comprimido e sistemas de vácuo.
+</li>
+
+<li>
+Diagnóstico e reparo de equipamentos como caldeiras,
+trocadores de calor, bombas centrífugas, bombas de deslocamento positivo,
+redutores, válvulas industriais, compressores e sopradores.
+</li>
+
+<li>
+Configuração e manutenção de inversores de frequência e soft starters
+das marcas Siemens, WEG, Danfoss, ABB, Allen-Bradley e Schneider Electric.
+</li>
+
+<li>
+Suporte técnico em sistemas automatizados com CLPs Siemens,
+sensores industriais e instrumentação de campo.
+</li>
+
+<li>
+Gestão de ordens de manutenção via SAP e elaboração de relatórios técnicos.
+</li>
+
+</ul>
+
+</div>
+
+<div class="job">
+
+<div class="job-title">
+Supervisor PCM / Técnico Mecânico – Caltec Química Industrial
+</div>
+
+<p class="job-meta">Itaperuçu – PR | 04/2015 – 03/2023</p>
+
+<ul>
+
+<li>
+Planejamento e controle de manutenção (PCM) em equipamentos industriais.
+</li>
+
+<li>
+Supervisão da equipe de lubrificação industrial.
+</li>
+
+<li>
+Gestão de ordens de serviço e histórico de falhas utilizando TOTVS Datasul.
+</li>
+
+<li>
+Diagnóstico de falhas técnicas e elaboração de relatórios de manutenção.
+</li>
+
+<li>
+Projetos de nacionalização e recuperação de peças mecânicas.
+</li>
+
+</ul>
+
+</div>
+
+<div class="job">
+
+<div class="job-title">
+Eletromecânico – Polionda
+</div>
+
+<p class="job-meta">São José dos Pinhais – PR | 2012 – 2014</p>
+
+<ul>
+
+<li>Manutenção eletromecânica em extrusoras e injetoras CNC.</li>
+
+<li>Atuação em sistemas pneumáticos, hidráulicos e inversores de frequência.</li>
+
+<li>Instalação e manutenção de motores elétricos e bombas industriais.</li>
+
+</ul>
+
+</div>
+
+<h2>Formação Acadêmica</h2>
+
+<ul>
+
+<li>
+<strong>Engenharia da Computação</strong> – Faculdade Descomplica<br>
+Cursando – 6º semestre<br>
+Previsão de conclusão: Julho/2026
+</li>
+
+<li>
+<strong>Técnico em Eletromecânica Industrial</strong> – SENAI<br>
+Conclusão: 2011
+</li>
+
+</ul>
+
+<h2>Certificações e Cursos</h2>
+
+<ul>
+
+<li>Mecânica Industrial – SENAI (1260h)</li>
+<li>Fundamentos do SAP</li>
+<li>Excel 2016 Básico, Intermediário e Avançado – Fundação Bradesco (65h)</li>
+<li>Engenharia Reversa para Virtualização de Objetos com Onshape – 30h</li>
+<li>Leitura, Interpretação e Montagem de Comandos Elétricos com CADSIMU – 30h</li>
+
+<li>DB Developer – 160h</li>
+<li>Mobile Developer – 160h</li>
+<li>Programming Basics (HTML, CSS) – 160h</li>
+<li>Arquitetura e Organização de Computadores – 160h</li>
+<li>Interfaces Responsivas – 160h</li>
+<li>Internet das Coisas – 160h</li>
+<li>Inteligência Artificial Aplicada – 160h</li>
+<li>CyberSecurity – 160h</li>
+<li>User Experience – 160h</li>
+<li>Governança Digital 4.0 – 240h</li>
+<li>Global Network – 160h</li>
+<li>Front-end Web – DevMedia (135h)</li>
+<li>HTML – DevMedia (4h)</li>
+<li>Python – DevMedia (2h)</li>
+<li>NR 10 Complementar – Sistema Elétrico de Potência (SEP) – Inicial – 40h</li>
+<li>NR 20 Intermediário Classe III – Inflamáveis e Combustíveis – 16h</li>
+<li>NR 35 – Trabalho em Altura – 8h</li>
+<li>NR 33 Trabalhador e Vigia – Espaço Confinado – Inicial – 16h</li>
+
+</ul>
+
+<h2>Idiomas</h2>
+
+<ul>
+
+<li>
+<strong>Inglês Técnico:</strong>
+Leitura avançada de documentação técnica, escrita intermediária
+e conversação básica.
+</li>
+
+</ul>
+
+</main>
+
+<script>
+const originalTitle = document.title;
+
+function printCurriculo(){
+document.title = "Fernando-Roque-dos-Santos-Curriculo";
+window.print();
+}
+
+window.addEventListener("afterprint", () => {
+document.title = originalTitle;
+});
+</script>
+
+</body>
+</html>
