@@ -245,7 +245,7 @@ transition:box-shadow 0.25s ease;
 box-shadow:0 8px 18px rgba(0,0,0,0.15);
 }
 
-/* CORRIGIDO: delays para todos os 8 cards */
+/* CORRIGIDO: delays para todos os cards */
 .projeto:nth-child(1){animation-delay:0.0s;}
 .projeto:nth-child(2){animation-delay:0.1s;}
 .projeto:nth-child(3){animation-delay:0.2s;}
@@ -254,6 +254,7 @@ box-shadow:0 8px 18px rgba(0,0,0,0.15);
 .projeto:nth-child(6){animation-delay:0.5s;}
 .projeto:nth-child(7){animation-delay:0.6s;}
 .projeto:nth-child(8){animation-delay:0.7s;}
+.projeto:nth-child(9){animation-delay:0.8s;}
 
 
 /* ===== PREVIEW ===== */
@@ -347,6 +348,48 @@ transition:0.25s;
 .link-secondary:hover{
 background:#e8f4ff;
 transform:scale(1.05);
+}
+
+.private-note{
+display:inline-block;
+margin-top:15px;
+padding:10px 16px;
+background:#f3f4f6;
+color:#555;
+border:1px solid #d9dde3;
+border-radius:6px;
+font-size:14px;
+}
+
+.project-gallery{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:14px;
+align-items:flex-start;
+}
+
+.project-gallery a{
+width:140px;
+color:#555;
+font-size:12px;
+line-height:1.25;
+text-decoration:none;
+}
+
+.project-gallery img{
+width:140px;
+height:78px;
+display:block;
+object-fit:cover;
+border:1px solid #d9dde3;
+border-radius:4px;
+background:#f7f7f7;
+margin-bottom:5px;
+}
+
+.project-gallery a:hover img{
+border-color:#0077cc;
 }
 
 
@@ -490,13 +533,43 @@ Desenvolvo aplicações web e ferramentas voltadas para processos industriais e 
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
 
-<img src="https://img.shields.io/badge/SAP-0FAAFF?style=for-the-badge&logo=sap&logoColor=gray" alt="SAP">
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
 
-<img src="https://img.shields.io/badge/HTA-Windows-blue?style=for-the-badge" alt="HTA Windows">
+<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
 
-<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=gray" alt="Git">
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
 
-<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=gray" alt="Netlify">
+<img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express">
+
+<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
+
+<img src="https://img.shields.io/badge/Jinja2-B41717?style=for-the-badge&logo=jinja&logoColor=white" alt="Jinja2">
+
+<img src="https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL">
+
+<img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
+
+<img src="https://img.shields.io/badge/NoSQL-4A5568?style=for-the-badge" alt="NoSQL">
+
+<img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
+
+<img src="https://img.shields.io/badge/SAP%20MM-0FAAFF?style=for-the-badge&logo=sap&logoColor=white" alt="SAP MM">
+
+<img src="https://img.shields.io/badge/SAP%20GUI%20Script-0FAAFF?style=for-the-badge&logo=sap&logoColor=white" alt="SAP GUI Script">
+
+<img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="Chart.js">
+
+<img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare">
+
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+
+<img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code">
+
+<img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white" alt="Cursor">
+
+<img src="https://img.shields.io/badge/OpenAI%20%2F%20Codex-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI e Codex">
 
 </div>
 
@@ -545,25 +618,56 @@ Desenvolvo aplicações web e ferramentas voltadas para processos industriais e 
 <h1 id="projetos">Portfólio de Projetos</h1>
 
 <p style="text-align:center;color:#666;margin-top:-20px;margin-bottom:30px;">
-Projetos desenvolvidos durante meus estudos em desenvolvimento web versionados no Netlify e GitHub Pages
+Projetos desenvolvidos durante meus estudos em desenvolvimento web, automação, dados e ferramentas locais
 </p>
 
 <div class="grid">
 
-<!-- PCM VIEWER — NOVO CARD -->
+<!-- DASHBOARD PCM -->
 
 <div class="projeto">
-<img src="img/dashsite.png" class="preview" alt="PCM Viewer Demo — Dashboard de leitura executiva do PCM" loading="lazy">
+<img src="img/dashsite.png" class="preview" alt="Dashboard PCM — sistema de manutenção e indicadores" loading="lazy">
 <div class="content">
-<h2>PCM Viewer — Dashboard de Manutenção</h2>
+<h2>Dashboard PCM — Sistema de Manutenção</h2>
 <p>
-Dashboard de leitura executiva para Planejamento e Controle de Manutenção (PCM).
-Versão estática de demonstração com KPIs, ranking por técnico, cadência operacional diária
-e histórico de ordens de serviço — sem backend, pronto para GitHub Pages.
+Sistema operacional para Planejamento e Controle de Manutenção (PCM), com login por perfis,
+ordens de serviço, KPIs mensais, ranking por técnico, importação SAP, viewer público
+e backend com banco SQLite.
 </p>
-<p class="tech">Tecnologias: HTML, CSS, JavaScript, GitHub Pages</p>
-<a class="link" href="https://fernandors99.github.io/DashPcmSite/" target="_blank">Ver Projeto</a>
-<a class="link-secondary" href="https://github.com/FernandoRS99/DashPcmSite" target="_blank">Ver Código</a>
+<p class="tech">Tecnologias: React, Vite, JavaScript, Node.js, Express, SQLite, Chart.js, OpenAI API, Cloudflare, GitHub Pages</p>
+<a class="link" href="https://fernandors99.github.io/DashPcmSite/" target="_blank">Ver Demo</a>
+<a class="link-secondary" href="https://github.com/FernandoRS99/DashPcmSite" target="_blank">Código da Demo</a>
+</div>
+</div>
+
+
+<!-- MYCART -->
+
+<div class="projeto">
+<img src="img/mycart-app-redacted.png" class="preview" alt="MyCart — aplicativo local com valores e ativos ocultados" loading="lazy">
+<div class="content">
+<h2>MyCart — Carteira de Investimentos</h2>
+<p>
+Aplicativo web local para migrar controles de investimentos de planilha para um sistema Python,
+com carteira de ativos, compras e vendas, renda passiva, aportes, cotações, regras de aporte
+e banco SQLite local.
+</p>
+<p class="tech">Tecnologias: Python, FastAPI, Jinja2, SQLite, HTML, CSS, JavaScript, openpyxl, Requests, Google Sheets CSV, Yahoo Finance HTTP, PyInstaller</p>
+<div class="project-gallery" aria-label="Prints do MyCart">
+<a href="img/mycart-app-redacted.png" target="_blank" rel="noopener noreferrer">
+<img src="img/mycart-app-redacted.png" alt="Print do MyCart com valores ocultados" loading="lazy">
+<span>App com valores ocultados</span>
+</a>
+<a href="img/mycart-code-routes.png" target="_blank" rel="noopener noreferrer">
+<img src="img/mycart-code-routes.png" alt="Print de código do MyCart com rotas FastAPI" loading="lazy">
+<span>Rotas FastAPI</span>
+</a>
+<a href="img/mycart-code-data.png" target="_blank" rel="noopener noreferrer">
+<img src="img/mycart-code-data.png" alt="Print de código do MyCart com SQLite e dados" loading="lazy">
+<span>SQLite e dados</span>
+</a>
+</div>
+<span class="private-note">Código privado</span>
 </div>
 </div>
 
@@ -594,7 +698,7 @@ utilizando um calendário mensal com identificação visual por cores para facil
 Aplicação web desenvolvida para auxiliar no processo de apontamento de ordens de manutenção
 relacionadas à transação IW41 do SAP.
 </p>
-<p class="tech">Tecnologias: HTML, CSS, JavaScript</p>
+<p class="tech">Tecnologias: HTML, CSS, JavaScript, SAP IW41, SAP MM, SAP GUI Script</p>
 <a class="link" href="https://iw41slim.netlify.app/" target="_blank">Ver Projeto</a>
 </div>
 </div>
@@ -691,7 +795,7 @@ Repositório com projetos e códigos desenvolvidos durante meus estudos em progr
 </p>
 
 <p class="tech">
-Tecnologias: HTML, CSS, JavaScript, Git, GitHub Pages
+Tecnologias: HTML, CSS, JavaScript, React, Node.js, SQLite, Git e GitHub
 </p>
 
 <a class="link" href="https://github.com/FernandoRS99?tab=repositories" target="_blank">
